@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>Dream Place 1 - Alhambra, Granada</title>
+
+    <!-- Embedded Style Sheet -->
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background: linear-gradient(180deg, #f9f6f0 0%, #ede6d6 100%);
+            color: #2b1e1a;
+        }
+
+        /* BANNER SECTION */
+        .hero {
+            position: relative;
+            padding-bottom: 70px;
+            text-align: left;
+            color: #ffffff;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            animation: changeBg 18s infinite;
+        }
+
+        /* GLASSMORPHISM HEADER & NAV */
+        header {
+            background-color: rgba(15, 4, 5, 0.65);
+            padding: 20px 60px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid rgba(200, 150, 62, 0.4);
+            margin-bottom: 50px;
+            backdrop-filter: blur(8px);
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            color: #f3e5ab;
+            position: absolute;
+            left: 60px;
+        }
+
+        nav {
+            text-align: center;
+        }
+
+        /* NAVIGATION BUTTON STYLING */
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 13px;
+            letter-spacing: 1.5px;
+            padding: 11px 22px;
+            margin-left: 8px;
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.12); 
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            border-radius: 6px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(8px);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        nav a.active {
+            background-color: #c8963e;
+            color: #ffffff;
+            border-color: #f3e5ab;
+            box-shadow: 0px 0px 15px rgba(200, 150, 62, 0.8);
+        }
+
+        nav a:hover {
+            background-color: #ffffff;
+            color: #7a2021;
+            border-color: #ffffff;
+            transform: translateY(-3px);
+            box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.5);
+        }
+
+        /* BACKGROUND KEYFRAME ANIMATION */
+        @keyframes changeBg {
+            0%, 100% {
+                background-image: linear-gradient(90deg, rgba(15, 4, 5, 0.95) 0%, rgba(15, 4, 5, 0.75) 45%, rgba(0, 0, 0, 0.3) 100%), 
+                                  url('https://images.unsplash.com/photo-1620677368158-32b1293fac36?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D');
+            }
+            33% {
+                background-image: linear-gradient(90deg, rgba(15, 4, 5, 0.95) 0%, rgba(15, 4, 5, 0.75) 45%, rgba(0, 0, 0, 0.3) 100%), 
+                                  url('https://media.istockphoto.com/id/176052224/photo/alhambra-palace-with-perfect-reflection-in-granada-spain.webp?a=1&b=1&s=612x612&w=0&k=20&c=rFe3boyToCAjmqVcPlPebUn16eKoor_swGikfZAInH8=');
+            }
+            66% {
+                background-image: linear-gradient(90deg, rgba(15, 4, 5, 0.95) 0%, rgba(15, 4, 5, 0.75) 45%, rgba(0, 0, 0, 0.3) 100%), 
+                                  url('https://images.unsplash.com/photo-1495562569060-2eec283d3391?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D');
+            }
+        }
+
+        /* HERO CONTENT LAYOUT */
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 60px;
+        }
+
+        .hero-content {
+            max-width: 680px;
+        }
+
+        .hero-content h1 {
+            font-size: 56px;
+            margin: 0 0 10px 0;
+            letter-spacing: 2px;
+            color: #ffffff;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+            line-height: 1.1;
+        }
+
+        .hero-content .subtitle {
+            font-size: 18px;
+            font-style: italic;
+            margin-bottom: 25px;
+            color: #f3e5ab;
+            letter-spacing: 1px;
+        }
+
+        .hero-content .desc {
+            font-family: Arial, sans-serif;
+            font-size: 15px;
+            line-height: 1.8;
+            color: #e0d6c3;
+        }
+
+        /* SECTION HEADERS */
+        .section-header {
+            text-align: center;
+            margin-top: 60px;
+            margin-bottom: 25px;
+        }
+
+        .section-header h2 {
+            font-size: 28px;
+            color: #7a2021;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        .section-header p {
+            font-size: 14px;
+            color: #6b5247;
+            font-style: italic;
+            margin: 0;
+        }
+
+        /* CONTENT CONTAINER */
+        .container {
+            max-width: 1100px;
+            margin: 20px auto 40px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        .content-box {
+            flex: 1;
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 30px 35px;
+            border-top: 4px solid #7a2021;
+            border-radius: 12px;
+            box-shadow: 0px 10px 30px rgba(122, 32, 33, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .content-box:hover {
+            transform: translateY(-6px);
+            box-shadow: 0px 15px 35px rgba(122, 32, 33, 0.15);
+        }
+
+        .content-box h3 {
+            color: #7a2021;
+            margin-top: 0;
+            font-size: 20px;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #f0e6d2;
+            padding-bottom: 12px;
+        }
+
+        .content-box p, 
+        .content-box ul {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.8;
+            color: #3b2f2f;
+        }
+
+        .content-box ul {
+            padding-left: 20px;
+        }
+
+        .content-box li {
+            margin-bottom: 12px;
+        }
+
+        /* PHOTO GALLERY SECTION */
+        .gallery-grid {
+            max-width: 1100px;
+            margin: 0 auto 50px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .gallery-card {
+            background-color: #ffffff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e0d6c3;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .gallery-card img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+        }
+
+        .gallery-card p {
+            padding: 12px 15px;
+            margin: 0;
+            font-size: 13px;
+            text-align: center;
+            font-weight: bold;
+            color: #7a2021;
+        }
+
+        /* VIDEO & MAP SECTION */
+        .media-section {
+            max-width: 1100px;
+            margin: 0 auto 60px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        .media-card {
+            flex: 1;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 12px;
+            border-top: 4px solid #c8963e;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.08);
+            text-align: center;
+        }
+
+        .media-card h3 {
+            color: #7a2021;
+            margin-top: 0;
+            font-size: 18px;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .media-iframe {
+            width: 100%;
+            height: 300px;
+            border: 0;
+            border-radius: 8px;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #2b0b0e;
+            color: #d1b8a5;
+            text-align: center;
+            padding: 25px;
+            font-size: 12px;
+            letter-spacing: 1px;
+            border-top: 1px solid #c8963e;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero & Header Section (Gaya Museum Header) -->
+    <div class="hero">
+        
+        <!-- Header & Navigation Bar -->
+        <header>
+            <div class="logo">PORTFOLIO</div>
+            <nav>
+                <a href="index.html">BIODATA</a>
+                <a href="place1.html" class="active">DREAM PLACE 1</a>
+                <a href="place2.html">DREAM PLACE 2</a>
+            </nav>
+        </header>
+
+        <!-- Hero Content Container -->
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>THE ALHAMBRA PALACE</h1>
+                <div class="subtitle">Granada, Andalusia, Spain — The Jewel of Islamic Architecture</div>
+                <p class="desc">Perched high atop Sabika Hill in Granada, the Alhambra (Al-Hamra) is a world-renowned 13th-century palace and fortress complex celebrated for its intricate geometric calligraphy, serene reflecting pools, and breathtaking Generalife gardens.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Main Section Header -->
+    <div class="section-header">
+        <h2>History & Highlights</h2>
+        <p>Discover the heritage, architectural mastery, and iconic landmarks within Alhambra</p>
+    </div>
+
+    <!-- Two-Column Container: History & Key Highlights -->
+    <div class="container">
+        
+        <!-- Column 1: Historical Overview -->
+        <div class="content-box">
+            <h3>🏛️ Brief History of Alhambra</h3>
+            <p>Founded by <strong>Muhammad I al-Ghalib</strong> in 1238 under the Nasrid Dynasty, Alhambra was designed as a self-contained citadel housing royal palaces, government offices, gardens, and residential quarters.</p>
+            <p>The name <em>Alhambra</em> translates to <strong>"The Red One"</strong> in Arabic, describing the distinct reddish tone of the sun-dried tapia bricks forming its massive outer fortress walls.</p>
+        </div>
+
+        <!-- Column 2: Key Attractions -->
+        <div class="content-box">
+            <h3>✨ Key Attractions & Landmarks</h3>
+            <ul>
+                <li><strong>Nasrid Palaces (Palacio Nazaries):</strong> The royal core featuring exquisite carved stuccowork, delicate tile mosaics, and Islamic calligraphic inscriptions.</li>
+                <li><strong>Patio de los Leones (Court of the Lions):</strong> An iconic arcade courtyard supported by 124 white marble columns surrounding a central marble fountain carved with 12 lions.</li>
+                <li><strong>Generalife Gardens:</strong> The summer palace retreat showcasing terraced gardens, cascading water channels, and fragrant floral pathways.</li>
+                <li><strong>Alcazaba Fortress:</strong> The oldest military quarter offering sweeping panoramic views of the entire city of Granada.</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- PHOTO GALLERY SECTION -->
+    <div class="section-header">
+        <h2>Architecture of Alhambra</h2>
+        <p>Capturing the timeless beauty and architectural elegance of Alhambra</p>
+    </div>
+
+    <div class="gallery-grid">
+        <div class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1669231334393-db4ae180be84?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Calle Real de la Alhambra">
+            <p>Alhambra, Calle Real de la Alhambra</p>
+        </div>
+        <div class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1759434613653-e66f8332e532?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Nasrid Palaces Detail">
+            <p>Nasrid Palaces</p>
+        </div>
+        <div class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1716018177880-7fe261ed8055?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Patio de Los Leones">
+            <p>Patio de Los Leones</p>
+        </div>
+    </div>
+
+    <!-- CULTURE & GASTRONOMY SECTION -->
+    <div class="container">
+        <div class="content-box">
+            <h3>🍷 Andalusian Culture & Local Cuisine</h3>
+            <p>Granada and the surrounding Andalusian region are world-famous for their rich cultural fusion of Moorish and Spanish traditions. Visitors can experience authentic live performances at the official <a href="https://museodelbaileflamenco.com/en/flamenco-dance-museum/" target="_blank" style="color: #7a2021; font-weight: bold; text-decoration: underline;">Museo del Baile Flamenco</a> in Seville and enjoy the celebrated local tradition of <a href="https://www.nomadotravel.app/en/guides/free-tapas-granada-guide" target="_blank" style="color: #7a2021; font-weight: bold; text-decoration: underline;">free Tapas</a> served with drinks across traditional cafes.</p>
+            <ul>
+                <li><strong><a href="https://www.citylifemadrid.com/gazpacho-vs-salmorejo/" target="_blank" style="color: #7a2021; font-weight: bold; text-decoration: underline;">Gazpacho & Salmorejo</a>:</strong> Refreshing chilled Andalusian tomato soups infused with olive oil and garlic.</li>
+                <li><strong><a href="https://bake-street.com/en/piononos-from-santa-fe/" target="_blank" style="color: #7a2021; font-weight: bold; text-decoration: underline;">Piononos de Santa Fe</a>:</strong> Famous local sweet pastries soaked in syrup and crowned with toasted cream.</li>
+                <li><strong><a href="https://elcocinerocasero.com/receta/habas-con-jamon-y-huevo/" target="_blank" style="color: #7a2021; font-weight: bold; text-decoration: underline;">Habas con Jamón</a>:</strong> Traditional Granada dish of tender broad beans sautéed with local herbs and olive oil.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- VIDEO & MAP SECTION -->
+   <div class="media-section">
+        <!-- YouTube Video Clip (Autoplay & Silent) -->
+        <div class="media-card">
+            <h3>🎬 Beautiful of Alhambra</h3>
+            <iframe 
+                class="media-iframe" 
+                src="https://www.youtube-nocookie.com/embed/qgPI4rt860Y?autoplay=1&mute=1&loop=1&playlist=qgPI4rt860Y&si=CvtMrW1KBpB3zpla" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <!-- Google Map -->
+        <div class="media-card">
+            <h3>📍 Granada, Spain</h3>
+            <iframe 
+                class="media-iframe"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3179.033621437198!2d-3.591244023531128!3d37.17733624640578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd71fcbfac862215%3A0x23f79029a502e6c8!2sAlhambra!5e0!3m2!1sen!2smy!4v1710000000000!5m2!1sen!2smy" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2027 SITI NUR KHADIJAH | BIC21203 Web Development Lab 2</p>
+    </footer>
+
+</body>
+</html>

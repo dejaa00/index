@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Biodata</title>
+
+    <!-- Embedded Style Sheet -->
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background: linear-gradient(180deg, #eef2f7 0%, #dbe3ed 100%);
+            color: #212529;
+        }
+
+        /* BANNER SECTION */
+        .hero {
+            position: relative;
+            padding-bottom: 60px;
+            text-align: center;
+            color: #ffffff;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            animation: changeBg 15s infinite;
+        }
+
+        /* HEADER */
+        header {
+            background-color: rgba(0, 0, 0, 0.4);
+            padding: 20px 40px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            margin-bottom: 40px;
+            backdrop-filter: blur(6px);
+        }
+
+        .logo {
+            position: absolute;
+            left: 40px;
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            color: #ffffff;
+        }
+
+        nav {
+            text-align: center;
+        }
+
+        /* Nav */
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 13px;
+            letter-spacing: 1.5px;
+            padding: 11px 22px;
+            margin: 0 6px;
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.2); 
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 6px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4), inset 0px 1px 0px rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(8px);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        nav a.active {
+            background-color: #ffffff;
+            color: #0d1b2a;
+            border-color: #ffffff;
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.7);
+        }
+
+        nav a:hover {
+            background-color: #ffffff;
+            color: #0d1b2a;
+            border-color: #ffffff;
+            transform: translateY(-3px);
+            box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.5);
+        }
+
+        nav a:active {
+            transform: translateY(-1px);
+            box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Background */
+        @keyframes changeBg {
+            0%, 100% {
+                background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), 
+                                  url('https://plus.unsplash.com/premium_photo-1753217342200-bad9cfb7dfe7?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D');
+            }
+            33% {
+                background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), 
+                                  url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1600');
+            }
+            66% {
+                background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), 
+                                  url('https://images.unsplash.com/photo-1578815552910-2a8c85bf806c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D');
+            }
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            font-size: 16px;
+            font-style: italic;
+            margin-bottom: 30px;
+            color: #e0e1dd;
+        }
+
+        /* Table Styling */
+        table {
+            width: 80%;
+            max-width: 700px;
+            margin: 0 auto;
+            border-collapse: collapse;
+            background-color: rgba(255, 255, 255, 0.95);
+            color: #333333;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        th {
+            background-color: #1d3557;
+            color: #ffffff;
+            padding: 14px;
+            font-size: 16px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        td {
+            padding: 12px 20px;
+            border-bottom: 1px solid #dee2e6;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+
+        td.label {
+            font-weight: bold;
+            color: #1d3557;
+            width: 35%;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+
+        .section-header h2 {
+            font-size: 26px;
+            color: #1d3557;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        .section-header p {
+            font-size: 14px;
+            color: #6c757d;
+            font-style: italic;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 20px auto 60px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        .content-box {
+            flex: 1;
+            background-color: rgba(255, 255, 255, 0.9); /* Kad semi-transparent */
+            padding: 30px 35px;
+            border-top: 4px solid #1d3557;
+            border-radius: 12px;
+            box-shadow: 0px 10px 30px rgba(13, 27, 42, 0.08); /* Bayangan lebih dalam */
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .content-box:hover {
+            transform: translateY(-6px);
+            box-shadow: 0px 15px 35px rgba(13, 27, 42, 0.15);
+        }
+
+        .content-box h3 {
+            color: #1d3557;
+            margin-top: 0;
+            font-size: 20px;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .content-box ul, 
+        .content-box ol {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.8;
+            color: #333333;
+            padding-left: 20px;
+        }
+
+        .content-box li {
+            margin-bottom: 12px;
+            padding-left: 5px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0d1b2a;
+            color: #8d99ae;
+            text-align: center;
+            padding: 25px;
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Background Section -->
+    <div class="hero">
+        
+        <!-- Header & Navigation Bar -->
+        <header>
+            <div class="logo">PORTFOLIO</div>
+            <nav>
+                <a href="index.html" class="active">BIODATA</a>
+                <a href="place1.html">DREAM PLACE 1</a>
+                <a href="place2.html">DREAM PLACE 2</a>
+            </nav>
+        </header>
+
+        <h1>WELCOME TO MY PROFILE</h1>
+        <p>Get to know me more — my background, passions, and future aspirations!</p>
+
+        <!-- Profile Picture -->
+        <img src="khadijah.PNG" alt="Profile Picture" width="130" height="170" style="border-radius: 50%; border: 3px solid #ffffff; margin-bottom: 20px;">
+        <br>
+
+        <!-- Personal Information -->
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="2">Personal Information</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="label">Full Name:</td>
+                    <td>SITI NUR KHADIJAH BINTI MOHAMAD ALAWI</td>
+                </tr>
+                <tr>
+                    <td class="label">Matric No:</td>
+                    <td>AI250057</td>
+                </tr>
+                <tr>
+                    <td class="label">Course / Program:</td>
+                    <td>Bachelor of Computer Science (Information Security)</td>
+                </tr>
+                <tr>
+                    <td class="label">Email:</td>
+                    <td>ai250057@student.uthm.edu.my</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Tajuk Pengenalan Seksyen Bawah -->
+    <div class="section-header">
+        <h2>Passions & Aspirations</h2>
+        <p>A glimpse into what drives me and where I am headed</p>
+    </div>
+
+    <!-- Container Personal Interest & Plan 2027 -->
+    <div class="container">
+        
+        <!-- Box Unordered List -->
+        <div class="content-box">
+            <h3>✦ Personal Interests</h3>
+            <ul>
+                <li>Cybersecurity, Information Security & Ethical Hacking</li>
+                <li>AI-Powered Security Systems</li>
+                <li>Landscape Photography, Flowers & Travel Exploration</li>
+                <li>Personal Growth, Academic Excellence & Continuous Learning</li>
+            </ul>
+        </div>
+
+        <!-- Box Ordered List -->
+        <div class="content-box">
+            <h3>🎯 Plans for 2027</h3>
+            <ol>
+                <li>Achieve excellent academic results and work towards graduating with First Class Honours at UTHM.</li>
+                <li>Explore beautiful destinations, capture meaningful moments through photography, and learn about different cultures.</li>
+                <li>Build a professional cybersecurity portfolio on GitHub and earn a relevant industry certification when feasible.</li>
+                <li>Participate in university activities, cybersecurity competitions, or technical workshops to gain experience.</li>
+            </ol>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2027 SITI NUR KHADIJAH | BIC21203 Web Development Lab 2</p>
+    </footer>
+
+</body>
+</html>
